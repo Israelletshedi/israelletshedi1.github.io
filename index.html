@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS19 Coding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="clock">
+                <div class="inside">
+                    <div class="time">
+                        <span id="hours">01</span>
+                        :
+                        <span id="min">01</span>
+                        :
+                        <span id="sec">01</span>
+                        <span id="ampm">AM</span>
+
+                        <div class="date-container">
+                            <p id="formatted-date"></p>
+                        </div>
+
+                        <div id="output-microphone">
+                            <button id="start-btn"
+                                data-title="Click to start voice recognition. You can say expressions like '5 multiply 3' to get the result.">🎙️</button>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <input type="text" name="displat" id="display" placeholder="ISRAEL LETSHEDI...">
+                    </div>
+                    <div>
+                        <button onclick="clearDisplay()" id="operator">AC</button>
+                        <button onclick="deleteLast()" class="operator" id="operator">DEL</button>
+                        <button onclick="calculateSquareRoot()" id="operator">√</button>
+                        <button onclick="display.value += '/' " id="operator">/</button>
+                    </div>
+                    <div>
+                        <button onclick="display.value += '7'">7</button>
+                        <button onclick="display.value += '8'">8</button>
+                        <button onclick="display.value += '9'">9</button>
+                        <button onclick="display.value += '*' " id="operator">*</button>
+                    </div>
+                    <div>
+                        <button onclick="display.value += '4' ">4</button>
+                        <button onclick="display.value += '5' ">5</button>
+                        <button onclick="display.value += '6' ">6</button>
+                        <button onclick="display.value += '-' " id="operator">-</button>
+                    </div>
+                    <div>
+                        <button onclick="display.value += '1' ">1</button>
+                        <button onclick="display.value += '2' ">2</button>
+                        <button onclick="display.value += '3' ">3</button>
+                        <button onclick="display.value += '+' " id="operator">+</button>
+                    </div>
+                    <div>
+                        <button onclick="display.value += '0' ">0</button>
+                        <button onclick="display.value += '.' ">.</button>
+                        <button onclick="toggleBracket()" id="bracket">( )</button>
+                        <button onclick="calculate()" id="equal">=</button>
+                    </div>
+                </div>
+            </div>
+            <script src="script.js"></script>
+</body>
+
+</html>
